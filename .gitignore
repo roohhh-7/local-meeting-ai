@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+backend/venv/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Next.js
+.next/
+out/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Databases and Uploads
+chroma_db/
+uploads/
+*.db
+*.sqlite3
+
+# Docker
+.docker/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+desktop.ini
