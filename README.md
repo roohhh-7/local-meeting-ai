@@ -7,12 +7,12 @@ Meetpilot is a high-performance, 100% local AI assistant designed to turn your m
 
 ##  Features
 
-- ** 100% Local Intelligence:** All processing happens on your machine using Whisper.cpp and Llama 3.2 via Ollama.
-- ** Smart Transcription:** Industry-leading accuracy for meeting recordings in 100+ languages.
-- ** AI Summarization:** Instant key points, decisions, and action items generated automatically.
-- ** RAG-Powered Chat:** Chat with your entire meeting history to find insights from months ago.
-- ** High-Performance UI:** A premium, builder-focused obsidian dashboard with high-contrast dark mode.
-- ** Easy Export:** One-click exports for summaries and transcripts to your favorite tools.
+- **100% Local Intelligence:** All processing happens on your machine using Whisper.cpp and Llama 3.2 via Ollama.
+- **Smart Transcription:** Industry-leading accuracy for meeting recordings in 100+ languages.
+- **AI Summarization:** Instant key points, decisions, and action items generated automatically.
+- **RAG-Powered Chat:** Chat with your entire meeting history to find insights from months ago.
+- **High-Performance UI:** A premium, builder-focused obsidian dashboard with high-contrast dark mode.
+- **Easy Export:** One-click exports for summaries and transcripts to your favorite tools.
 
 ##  Tech Stack
 
