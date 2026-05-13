@@ -1,52 +1,69 @@
-# Antigravity AI: Local Meeting Intelligence Platform
+# Meetpilot 🛫
 
-A production-grade AI Meeting Intelligence Platform built with 100% local AI models.
+**The Privacy-First AI Meeting Intelligence Platform.**
 
-## Features
+Meetpilot is a high-performance, 100% local AI assistant designed to turn your meetings into actionable intelligence without ever letting your data leave your hardware. No bots, no cloud APIs, and zero privacy leaks.
 
-- **Local Transcription**: Uses Whisper.cpp for high-accuracy speech-to-text.
-- **AI Summarization**: Generates summaries, action items, and key points using Ollama (Llama 3).
-- **RAG Chat**: Chat with your meeting history using retrieval-augmented generation.
-- **Semantic Search**: Find meetings based on meaning, not just keywords.
-- **Modern Dashboard**: Premium SaaS interface built with Next.js 15 and Framer Motion.
+![Meetpilot Dashboard](/frontend/public/dashboard-preview.png)
 
-## Tech Stack
+## ✨ Features
 
-- **Frontend**: Next.js 15, Tailwind CSS, Shadcn UI, Zustand, Framer Motion.
-- **Backend**: FastAPI, PostgreSQL, Redis, Celery.
-- **AI**: Ollama, Whisper.cpp, ChromaDB, Sentence-Transformers.
+- **🔒 100% Local Intelligence:** All processing happens on your machine using Whisper.cpp and Llama 3.2 via Ollama.
+- **📝 Smart Transcription:** Industry-leading accuracy for meeting recordings in 100+ languages.
+- **🧠 AI Summarization:** Instant key points, decisions, and action items generated automatically.
+- **💬 RAG-Powered Chat:** Chat with your entire meeting history to find insights from months ago.
+- **⚡ High-Performance UI:** A premium, builder-focused obsidian dashboard with high-contrast dark mode.
+- **💾 Easy Export:** One-click exports for summaries and transcripts to your favorite tools.
 
-## Prerequisites
+## 🛠️ Tech Stack
 
-1. **Ollama**: Install from [ollama.com](https://ollama.com/)
-   - Pull the model: `ollama pull llama3`
-2. **Docker**: (Optional but recommended)
-3. **Whisper.cpp**: (For transcription)
+| Component | Technology |
+| :--- | :--- |
+| **Frontend** | Next.js 14, Tailwind CSS, Framer Motion, Lucide Icons |
+| **Backend** | FastAPI (Python), SQLAlchemy |
+| **AI/ML** | Ollama (Llama 3.2), Whisper.cpp |
+| **Database** | PostgreSQL |
+| **Cache/Queue** | Redis, Celery |
+| **Infrastructure** | Docker, Docker Compose |
 
-## Getting Started
+## 🚀 Quick Start
 
-### Method 1: Using Docker (Recommended)
+### Prerequisites
+- **Docker & Docker Compose** installed.
+- **Ollama** running locally on your machine (`http://localhost:11434`).
 
-```bash
-docker-compose up --build
-```
+### Installation
 
-### Method 2: Manual Setup
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/roohhh-7/local-meeting-ai.git
+   cd local-meeting-ai
+   ```
 
-#### Backend
-1. `cd backend`
-2. `pip install -r requirements.txt`
-3. `uvicorn main:app --reload`
+2. **Configure Environment**
+   - Create `.env` files in both `backend/` and `frontend/` (see `.env.example` in each directory).
 
-#### Frontend
-1. `cd frontend`
-2. `npm install`
-3. `npm run dev`
+3. **Spin up with Docker**
+   ```bash
+   docker-compose up --build
+   ```
 
-## Configuration
+4. **Access the App**
+   - Frontend: `http://localhost:3000`
+   - Backend API: `http://localhost:8000`
 
-Edit the `.env` files in `backend/` and `frontend/` to match your local setup.
+## 🛡️ Privacy Mission
 
-## AI Setup
+In an era of cloud-everything, Meetpilot stands for **Digital Sovereignty**. We believe your private conversations should stay private. By leveraging local LLMs and local transcription models, Meetpilot provides the power of modern AI with the security of an air-gapped environment.
 
-The system relies on a local Ollama instance running at `http://localhost:11434`. Ensure it is active before processing meetings or chatting.
+## 🗺️ Roadmap
+
+- [ ] Real-time live transcription (browser-based).
+- [ ] Integration with Notion, Obsidian, and Slack.
+- [ ] Multi-speaker diarization improvements.
+- [ ] Mobile-responsive dashboard optimization.
+
+---
+
+Built with ❤️ for the privacy-conscious builder. 
+© 2026 Meetpilot AI. Proudly Open Source.
