@@ -1,4 +1,4 @@
-# Meetpilot 🛫
+# Meetpilot 
 
 **The Privacy-First AI Meeting Intelligence Platform.**
 
