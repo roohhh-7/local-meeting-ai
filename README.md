@@ -4,18 +4,17 @@
 
 Meetpilot is a high-performance, 100% local AI assistant designed to turn your meetings into actionable intelligence without ever letting your data leave your hardware. No bots, no cloud APIs, and zero privacy leaks.
 
-![Meetpilot Dashboard](/frontend/public/dashboard-preview.png)
 
-## ✨ Features
+##  Features
 
-- **🔒 100% Local Intelligence:** All processing happens on your machine using Whisper.cpp and Llama 3.2 via Ollama.
-- **📝 Smart Transcription:** Industry-leading accuracy for meeting recordings in 100+ languages.
-- **🧠 AI Summarization:** Instant key points, decisions, and action items generated automatically.
-- **💬 RAG-Powered Chat:** Chat with your entire meeting history to find insights from months ago.
-- **⚡ High-Performance UI:** A premium, builder-focused obsidian dashboard with high-contrast dark mode.
-- **💾 Easy Export:** One-click exports for summaries and transcripts to your favorite tools.
+- ** 100% Local Intelligence:** All processing happens on your machine using Whisper.cpp and Llama 3.2 via Ollama.
+- ** Smart Transcription:** Industry-leading accuracy for meeting recordings in 100+ languages.
+- ** AI Summarization:** Instant key points, decisions, and action items generated automatically.
+- ** RAG-Powered Chat:** Chat with your entire meeting history to find insights from months ago.
+- ** High-Performance UI:** A premium, builder-focused obsidian dashboard with high-contrast dark mode.
+- ** Easy Export:** One-click exports for summaries and transcripts to your favorite tools.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Component | Technology |
 | :--- | :--- |
@@ -26,7 +25,7 @@ Meetpilot is a high-performance, 100% local AI assistant designed to turn your m
 | **Cache/Queue** | Redis, Celery |
 | **Infrastructure** | Docker, Docker Compose |
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - **Docker & Docker Compose** installed.
@@ -52,11 +51,11 @@ Meetpilot is a high-performance, 100% local AI assistant designed to turn your m
    - Frontend: `http://localhost:3000`
    - Backend API: `http://localhost:8000`
 
-## 🛡️ Privacy Mission
+##  Privacy Mission
 
 In an era of cloud-everything, Meetpilot stands for **Digital Sovereignty**. We believe your private conversations should stay private. By leveraging local LLMs and local transcription models, Meetpilot provides the power of modern AI with the security of an air-gapped environment.
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [ ] Real-time live transcription (browser-based).
 - [ ] Integration with Notion, Obsidian, and Slack.
