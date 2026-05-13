@@ -37,6 +37,44 @@ export default function MeetingDetails() {
     fetchMeetingDetails();
   }, [id]);
 
+  const handleExport = () => {
+    const content = `
+MEETING: ${meeting.title}
+DATE: ${new Date(meeting.created_at).toLocaleString()}
+DURATION: ${meeting.duration ? `${Math.round(meeting.duration/60)}m` : "N/A"}
+
+AI SUMMARY:
+${meeting.ai_summary?.summary || "No summary available."}
+
+KEY INSIGHTS:
+${meeting.ai_summary?.key_points?.join("\n- ") || "N/A"}
+
+ACTION ITEMS:
+${meeting.ai_summary?.action_items?.join("\n- ") || "N/A"}
+
+FULL TRANSCRIPT:
+${meeting.transcript?.raw_text || "No transcript available."}
+    `.trim();
+
+    const blob = new Blob([content], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${meeting.title.replace(/\s+/g, "_")}_summary.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleWatch = () => {
+    if (meeting.file_path) {
+      // Construct the absolute URL to the backend media endpoint
+      const videoUrl = `${api.defaults.baseURL}/meetings/video/${id}`;
+      window.open(videoUrl, "_blank");
+    }
+  };
+
   if (loading) {
     return (
       <div className="flex h-screen bg-background">
@@ -77,12 +115,18 @@ export default function MeetingDetails() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <button className="flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-accent transition-colors">
-                <Download size={18} />
+              <button 
+                onClick={handleExport}
+                className="flex items-center gap-2 px-6 py-2.5 border rounded-full hover:bg-accent transition-all font-bold text-[10px] uppercase tracking-widest shadow-sm"
+              >
+                <Download size={14} />
                 Export
               </button>
-              <button className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">
-                <Play size={18} />
+              <button 
+                onClick={handleWatch}
+                className="flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-full hover:opacity-90 transition-all font-bold text-[10px] uppercase tracking-widest shadow-lg shadow-primary/20"
+              >
+                <Play size={14} />
                 Watch
               </button>
             </div>
